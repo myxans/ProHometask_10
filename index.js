@@ -2,7 +2,7 @@
 let array1 = []; 
 
 for (let i = 20; i <= 30; i += 0.5) {
-    array1.push(i)
+    array1.push(i);
 };
 
 console.log(array1.join(' '));
@@ -14,7 +14,7 @@ let array2 = [];
 let dollar = 27;
 
 for (i = 10; i <= 100; i += 10) {
-    array2.push(dollar*i)
+    array2.push(dollar * i);
 };
 
 console.log(array2);
@@ -27,7 +27,7 @@ let array3 = [];
 
 for (i = 1; i <= 100; i++) {
     if (i ** 2 < numNature) {
-        console.log(array3.push(i))
+        console.log(array3.push(i));
     }
 };
 
@@ -35,13 +35,16 @@ for (i = 1; i <= 100; i++) {
 
 let n = +prompt('Введіть ціле число №2');
 
-for (let i = 2; i < n; i++) {
-    if (n % i !== 0) {
-        console.log('Число просте')
-    } else {
-        alert('Число непросте')
-    }
-}
+function isPrime(n) {
+    for (let i = 2; i < n; i++) {
+        if (n % i == 0) {
+            return false;
+        }
+        return n > 1;
+    } 
+};
+
+alert(isPrime(n)? "Число просте" : "Число не просте");
 
 //Дане деяке число. Визначити, чи можна одержати це число шляхом зведення числа 3 у деякий ступінь. (Наприклад, числа 9, 81 можна отримати, а 13 - не можна).
 
