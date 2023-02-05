@@ -36,13 +36,14 @@ for (i = 1; i <= 100; i++) {
 let n = +prompt('Введіть ціле число №2');
 
 function isPrime(n) {
-    for (let i = 2; i < n; i++) {
-        if (n % i == 0) {
-            return false
-        }
-    } 
-    return n > 1;
-}
+      let count = 0;
+	    for (let i = 1; i <= n; i++) {
+	        if (n % i == 0) {
+	           count++;
+	        }
+	    } 
+	    return count <= 2;
+	}
 
 alert(isPrime(n) ? "Число просте " : "Число непросте");
 
